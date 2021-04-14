@@ -37,3 +37,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.5] - 2021-04-13
 ### Added
 - pr_curve_0413_squeezenet10.csv pr curve on squeezenet
+- pr_curve_0413_squeezenet10_b.csv without rotation 
