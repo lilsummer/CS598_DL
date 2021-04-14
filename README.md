@@ -1,110 +1,75 @@
 # CS598
-### 2020-04-03
-Model: ResNet50
-Data: 
 
-|       | COVID | Bateria Pneumonia | Viral Pneumoina | Normal |
-|-------|-------|-------------------|-----------------|--------|
-| Train | 2892  | 2224              | 1076            | 8153   |
-| Test  | 724   | 556               | 269             | 2039   |
-
+### 2020-04-12
+Model ResNet50
+Data: same as previous except that we kept only one image from each patient so there's no data leakage
 #### Data Augmentation
-```
-normalizer = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
-
-data_transforms = {
-    'train': transforms.Compose([
-        transforms.Resize((244, 244)),
-        transforms.RandomResizedCrop((244, 244)),
-        #transforms.RandomHorizontalFlip(),
-        #transforms.RandomVerticalFlip(),
-        #transforms.ColorJitter(),
-        transforms.ToTensor(),
-        normalizer
-    ]),
-    'validation': transforms.Compose([
-        transforms.Resize((244, 244)),
-        transforms.CenterCrop((244, 244)),
-        transforms.ToTensor(),
-        normalizer
-    ])
-}
-```
+Same as before
 #### Training
-batch size 32, 20 epochs, 4330 seconds for the entire notebook
-learning rate default: 1e-3
+same as before; time 6349 seconds
+#### Testing metric
+pr curve saved in pr_curve_0412_b_removal.csv
 
-#### Testing Metric
-PR curve, see figure 101
+confusion matrix
+|          | prediction |       |        |       |
+|----------|------------|-------|--------|-------|
+|          | Bacteria   | COVID | Normal | Viral |
+| Bacteria | 253        | 1     | 6      | 28    |
+| COVID    | 1          | 664   | 57     | 2     |
+| Normal   | 0          | 19    | 2001   | 19    |
+| Viral    | 46         | 0     | 9      | 214   |
+
+sensitivity specificity
+```
+0.9171, 0.9507
+```
+### 2020-04-13
+Model SqueezeNet1_0
+Data: same as previous
+#### Data Augmentation
+Same as before
+#### Training
+Same as before; time 5115 seconds
+#### Testing metric
+pr curve saved in pr_curve_0413_squeezenet10.csv
+
 Confusion matrix
-
 |          | prediction |       |        |       |
 |----------|------------|-------|--------|-------|
 |          | Bacteria   | COVID | Normal | Viral |
-| Bacteria | 518        | 1     | 19     | 18    |
-| COVID    | 3          | 607   | 114    | 0     |
-| Normal   | 20         | 62    | 1952   | 5     |
-| Viral    | 131        | 4     | 17     | 117   |
+| Bacteria | 250        | 0     | 6      | 32    |
+| COVID    | 3          | 616   | 103    | 2     |
+| Normal   | 3          | 39    | 1989   | 8     |
+| Viral    | 71         | 0     | 9      | 189   |
 
-Sensitivity & Specificity
+sensitivity specificity
 ```
-(0.8384, 0.9033)
+0.8508, 0.9353
 ```
-
-
-### 2020-04-05
-Model ResNet50
-Data: same as previous
-**This time adding random sampling for training and testing data**
+### 2020-04-13
+Model squeezeNet1_0
 #### Data Augmentation
-Same as before
+removed the rotation on training data
 #### Training
-Batch size 32, 25 epochs, lr = 2e-3, 5490 seconds
-#### Testing Metric
-Confusion Matrix
+training time 3708 seconds
+#### Testing metric
+pr curve saved in pr_curve_0413_squeezenet10_b.csv
+Confusion matrix
 |          | prediction |       |        |       |
 |----------|------------|-------|--------|-------|
 |          | Bacteria   | COVID | Normal | Viral |
-| Bacteria | 544        | 5     | 5      | 2     |
-| COVID    | 1          | 627   | 96     | 0     |
-| Normal   | 38         | 55    | 1944   | 2     |
-| Viral    | 174        | 3     | 19     | 73    |
+| Bacteria | 193        | 1     | 8      | 86    |
+| COVID    | 0          | 698   | 25     | 1     |
+| Normal   | 0          | 165   | 1863   | 11    |
+| Viral    | 25         | 6     | 5      | 233   |
 
-sensitivity and specificity
-
+sensitivity specificity
 ```
-0.8660, 0.8942
-```
-
-### 2020-04-10
-Model ResNet50
-Data: same as previous
-**This time added methods to save pr-curve data**
-#### Data Augmentation
-Same as before
-#### Training
-Batch size 32, 25 epochs, lr = 2e-3, 5490 seconds
-#### Testing Metric
-Confusion Matrix
-|          | prediction |       |        |       |
-|----------|------------|-------|--------|-------|
-|          | Bacteria   | COVID | Normal | Viral |
-| Bacteria | 536        | 0     | 17     | 3     |
-| COVID    | 11         | 535   | 178    | 0     |
-| Normal   | 49         | 18    | 1972   | 0     |
-| Viral    | 194        | 0     | 22     | 53    |
-
-sensitivity and specificity
-
-```
-0.7390, 0.8942
+0.9641, 0.8817
 ```
 
-### 2020-04-11
-Model ResNet50
-Data: same as previous
-#### Data Augmentation
-Used different normalization
+
+
 
 
 ### TODO
@@ -114,6 +79,9 @@ Used different normalization
 * Data Augmentation by adding more images
 * Random sampling for training and testing (need)(done)
 * Augmentor (need) (done)
-* Other models (need)
-* Other normalization
-* No data leakage from the bacterial dataset (need)
+* Other models (need) (squeezeNet)
+* Other normalization (need)
+* No data leakage from the bacterial dataset (need) (done)
+* Increase test size (need)
+* without rotation (need)
+* visualization before & after (need)
