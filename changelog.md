@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2021-04-14
+### Added
+- pc_curve_0413_resnet_b.csv for baseline resent50 without rotation
+- pc_curve_0414_resnet_distortion.csv for distortion resnet50 
+
+
+
 ## [1.1.0] - 2021-04-13
 ### Added
 - pr_curve_0413_squeezenet10.csv pr curve on squeezenet

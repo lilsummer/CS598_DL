@@ -67,8 +67,35 @@ sensitivity specificity
 ```
 0.9641, 0.8817
 ```
+### 2020-04-13
+Model ResNet50
+#### Data Augmentation
+remove rotation
+#### Training
+Training time 4849 seconds
+#### Testing metric
+pr curve saved in pr_curve_0413_resnet_b.csv
+notebook version: classifier on COVID version 12
 
+sensitivity specificity
+```
+0.9627	0.8925
+```
 
+### 2020-04-14
+Model ResNet50
+#### Data Augmentation
+Add random distortion
+#### Training 
+Training time 4563 seconds
+#### Testing metric
+pr curve saved in pr_curve_0414_resnet_distortion.csv
+notebook version: classifier on COVID version 13
+
+sensitivity sepcificity
+```
+0.924	0.9095
+```
 
 
 
