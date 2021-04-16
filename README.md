@@ -97,6 +97,20 @@ sensitivity sepcificity
 0.924	0.9095
 ```
 
+### 2020-04-15
+Model ResNet50
+#### Data Augmentation
+same as before, using Augmentor to increase the size of the training COVID data to 4000 images
+#### Training
+lr = .5e-3 time:3162 seconds
+#### Testing metric
+pr curve saved in pc_curve_0414_resnet_augmentor4000_lr.csv
+notebook version: classifier on COVID version 15
+
+sensitivity specificity
+```
+0.9199, 0.8987
+``
 
 
 ### TODO
@@ -112,3 +126,8 @@ sensitivity sepcificity
 * Increase test size (need)
 * without rotation (need)
 * visualization before & after (need)
+* Use torch transform plain version 
+* color-wise augmentation
+* Increase number of images using Augmentor
+* loss curve plot
+* DenseNet
