@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [1.1.4] - 2020-04-24
+### Added
+- Figures for the manuscript
+
+## [1.1.3] - 2021-04-18
+### Added
+- New train-test setting for the model
+### Changed
+- Added new baseline by having more consistent augmentation between train and testing
+
 ## [1.1.2] - 2021-04-15
 ## Changed
 - data augmentation: using Augmentor to increase the training set for COVID-19

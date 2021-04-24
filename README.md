@@ -117,17 +117,21 @@ sensitivity specificity
 * Learning rate (need)(done)
 * Train more epoch (done)
 * Save PR curve statistics (need)(done)
-* Data Augmentation by adding more images
+* Data Augmentation by adding more images (done)
 * Random sampling for training and testing (need)(done)
 * Augmentor (need) (done)
 * Other models (need) (squeezeNet)
 * Other normalization (need)
 * No data leakage from the bacterial dataset (need) (done)
 * Increase test size (need)
-* without rotation (need)
+* without rotation (need)(done)
 * visualization before & after (need)
 * Use torch transform plain version 
-* color-wise augmentation
-* Increase number of images using Augmentor
-* loss curve plot
-* DenseNet
+* color-wise augmentation (need)
+* Increase number of images using Augmentor (done)
+* loss curve plot (done)
+* DenseNet (need) (done)
+* smaller learning rate (1e-4) with more epochs (need)
+* learning rate scheduler and 1 cycle learning
+* check on other specific aumentation techniques
+* Check on bugs in the training function (need)
