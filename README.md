@@ -22,14 +22,6 @@ Notebook directory includes all the kaggle notebook used for the model pipeline.
 Here is the history of model training
 
 ## TODO
-* Learning rate (need)(done)
-* Train more epoch (done)
-* Save PR curve statistics (need)(done)
-* Data Augmentation by adding more images (done)
-* Random sampling for training and testing (need)(done)
-* Augmentor (need) (done)
-* Other models (need) (other resNet)
-* Other normalization (need)
 * No data leakage from the bacterial dataset (need) (done)
 * Increase test size (need) (done)
 * without rotation (need)(done)
@@ -38,10 +30,15 @@ Here is the history of model training
 * Increase number of images using Augmentor (done)
 * loss curve plot (done)
 * DenseNet (need) (done)
-* smaller learning rate (1e-4) with more epochs (need)
 * learning rate scheduler and 1 cycle learning (done)
 * check on other specific aumentation techniques
 * Check on bugs in the training function (need) (done)
+* stepLR (need) (done)
+* Other models (need) (other resNet)
+* update the tables (need)
+* reduceLRonPlatau section - figure (need)
+* reduceLR section - table
+* reduceLR result - text
 * visualization before & after (need)
-* stepLR (need)
+* go over project requirement
 
