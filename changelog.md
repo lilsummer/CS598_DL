@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+## [1.2.1] - 2020-05-04
+### Added
+- Notebook for calculating PR-AUC, added to the table
 
 ## [1.2.0] - 2020-04-27
 ### Added

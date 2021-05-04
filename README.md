@@ -22,23 +22,21 @@ Notebook directory includes all the kaggle notebook used for the model pipeline.
 Here is the history of model training
 
 ## TODO
-* No data leakage from the bacterial dataset (need) (done)
-* Increase test size (need) (done)
-* without rotation (need)(done)
-* Use torch transform plain version 
-* color-wise augmentation (need)
-* Increase number of images using Augmentor (done)
-* loss curve plot (done)
-* DenseNet (need) (done)
-* learning rate scheduler and 1 cycle learning (done)
-* check on other specific aumentation techniques
-* Check on bugs in the training function (need) (done)
-* stepLR (need) (done)
-* Other models (need) (other resNet)
-* update the tables (need)
-* reduceLRonPlatau section - figure (need)
-* reduceLR section - table
-* reduceLR result - text
-* visualization before & after (need)
+* You should also introduce PR-AUC score in section 2.3. (need) (done)
+* visualization before & after: use images that have identified region of infection (need)
+* the need to align images (add to discussion)
+* distortion without cropping (for three models)
+* It is unpredictable how the model will perform for larger unseen images. (add this point to discussion)
+* Add AUC as metric (need) (done)
+* incrementally unfreezing the pretrained models (add this to discussion)
+* actual cost of x-ray imgaes (add to intro/discussion)
+* other pretrained models on x-ray images (add to discussion)
+* explain why validation loss was flatterned (add to result)
+* Improve the readme format (need)
+* code formulation, packaging (need)
+* make sure the repo is upto date (need)
+* Hypothesis (need)
 * go over project requirement
+* data augmentation
+* biomarks from x-ray images discussion (done)
 
