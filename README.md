@@ -1,4 +1,5 @@
-# CS598
+## Exploration on Data Augmentation and Learning Rate Optimization on Detection of COVID-19 via Chest X-ray (CXR) Images
+
 Use pretrained models on chest x-ray dataset in order to classify:
 
 * Normal images
@@ -6,8 +7,42 @@ Use pretrained models on chest x-ray dataset in order to classify:
 * COVID-19
 * Non COVID-19 viral pneumonia
 
+The pretrained models include:
+
+* ResNet50
+* SqueezeNet
+* DenseNet121
+
+## Table of contents
+* [Usage](#usage)
+* [Scripts](#scripts)
+* [Changelog](#changelog)
+* [Notebook](#notebook)
+* [ReadMeArchieve](#readmearchieve)
+
+## Usage
+This project was implemented on Kaggle Notebook (GPU kernel). The best way to run the experiements is to upload the notebook in `/notebook/` directory to [kaggle notebook](), and link two following dataset:
+
+* [Kaggle COVID-19 radiography dataset]()
+* [Kaggle Chest X-ray dataset]()
+
+The notebook will perform the following steps end-to-end
+
+* data preprocessing
+* model training and inferencing
+* metrics reporting
+
+## Scripts
+'/scripts/' folder includes:
+
+* preprocess_data_set2.py
+* ex2_pipe_1.py
+* ex3_sched_1.py
+* ex4_sched_1.py
+* ex5.py
+
 ## Changelog
-Please see here for the changelog
+Please see [here]() for the changelog
 
 ## Notebook
 Notebook directory includes all the kaggle notebook used for the model pipeline. This includes
@@ -17,26 +52,5 @@ Notebook directory includes all the kaggle notebook used for the model pipeline.
 * `densenet-classifier` use densenet 121
 * `1cycle-resnet50` use 1cycle learning rate optimization to fine-tune resnet50
 
-
-## ReadMe archive
+## ReadMeArchieve
 Here is the history of model training
-
-## TODO
-* You should also introduce PR-AUC score in section 2.3. (need) (done)
-* visualization before & after: use images that have identified region of infection (need)
-* the need to align images (add to discussion)
-* distortion without cropping (for three models)
-* It is unpredictable how the model will perform for larger unseen images. (add this point to discussion)
-* Add AUC as metric (need) (done)
-* incrementally unfreezing the pretrained models (add this to discussion)
-* actual cost of x-ray imgaes (add to intro/discussion)
-* other pretrained models on x-ray images (add to discussion)
-* explain why validation loss was flatterned (add to result)
-* Improve the readme format (need)
-* code formulation, packaging (need)
-* make sure the repo is upto date (need)
-* Hypothesis (need)
-* go over project requirement
-* data augmentation
-* biomarks from x-ray images discussion (done)
-
