@@ -53,4 +53,4 @@ Notebook directory includes all the kaggle notebook used for the model pipeline.
 * `1cycle-resnet50` use 1cycle learning rate optimization to fine-tune resnet50
 
 ## ReadMeArchieve
-Here is the history of model training
+[Here](https://github.com/lilsummer/CS598_DL/blob/main/README_ARCHIVE.md) is a incomplete history of model training
