@@ -23,8 +23,8 @@ The pretrained models include:
 ## Usage
 This project was implemented on Kaggle Notebook (GPU kernel). The best way to run the experiements is to upload the notebook in `/notebook/` directory to [kaggle notebook](), and link two following dataset:
 
-* [Kaggle COVID-19 radiography dataset]()
-* [Kaggle Chest X-ray dataset]()
+* [Kaggle COVID-19 radiography dataset](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database)
+* [Kaggle Chest X-ray dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
 
 The notebook will perform the following steps end-to-end
 
@@ -33,7 +33,7 @@ The notebook will perform the following steps end-to-end
 * metrics reporting
 
 ## Scripts
-'/scripts/' folder includes:
+`/scripts/` folder includes:
 
 * preprocess_data_set2.py
 * ex2_pipe_1.py
@@ -42,7 +42,7 @@ The notebook will perform the following steps end-to-end
 * ex5.py
 
 ## Changelog
-Please see [here]() for the changelog
+Please see [here](https://github.com/lilsummer/CS598_DL/blob/main/changelog.md) for the changelog
 
 ## Notebook
 Notebook directory includes all the kaggle notebook used for the model pipeline. This includes
